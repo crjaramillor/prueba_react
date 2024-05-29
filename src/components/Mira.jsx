@@ -30,13 +30,17 @@ const Mira = () => {
     { option: "What's the latest fashion trend for chic style?" },
   ];
   const [selectedOptions, setSelectedOptions] = useState(Array(options.length).fill(false));
+
   const handleClick = (index) => {
     setSelectedOptions(prevSelectedOptions => {
-      const newSelectedOptions = [...prevSelectedOptions];
-      newSelectedOptions[index] = !newSelectedOptions[index];
+      // Crear un nuevo array con todos los valores en false
+      const newSelectedOptions = Array(options.length).fill(false);
+      // Activar solo el índice clickeado
+      newSelectedOptions[index] = true;
       return newSelectedOptions;
     });
   };
+  
   
   return (
     <Container
@@ -160,7 +164,7 @@ const Mira = () => {
                     borderStyle: "solid",
                   }}
                 >
-                  <Typography sx={{ color: "#828282" }}>
+                  <Typography sx={{ color: "#828282", textTransform: "capitalize" }}>
                     Can you rate my outfit?
                   </Typography>
                 </Box>
@@ -189,7 +193,7 @@ const Mira = () => {
                   borderStyle: "solid",
                 }}
               >
-                <Typography sx={{ color: "##FFFFFF" }}>
+                <Typography sx={{ color: "#FFFFFF",textTransform: "capitalize"  }}>
                   Sure, send me a photo!
                 </Typography>
               </Box>

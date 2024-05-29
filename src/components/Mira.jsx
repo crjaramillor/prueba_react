@@ -217,7 +217,8 @@ const Mira = () => {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-                cursor: "pointer"
+                cursor: "pointer",
+                borderRadius: "12px"
               }}
             >
               <CollectionsOutlined
@@ -237,7 +238,8 @@ const Mira = () => {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-                cursor: "pointer"
+                cursor: "pointer",
+                borderRadius: "12px"
               }}
             >
               <CameraAltOutlined
